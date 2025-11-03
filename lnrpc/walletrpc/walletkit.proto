@@ -1245,7 +1245,8 @@ message BumpFeeRequest {
     /*
     Optional. Whether to include the raw transaction hex in the response. This
     is useful for cases where the transaction does not propagate and the caller
-    wants to manually broadcast it.
+    wants to manually broadcast it. Note that setting this to true will cause
+    the RPC call to block until the sweep transaction is created.
     */
     bool include_raw_tx = 9;
 }

@@ -1193,8 +1193,7 @@ func (w *WalletKit) BumpFee(ctx context.Context,
 				var buf bytes.Buffer
 				err := result.Tx.Serialize(&buf)
 				if err != nil {
-					return nil, fmt.Errorf("failed to "+
-						"serialize tx: %w", err)
+					return nil, fmt.Errorf("failed to serialize tx: %w", err)
 				}
 				response.RawTx = hex.EncodeToString(buf.Bytes())
 			}
