@@ -1243,9 +1243,11 @@ message BumpFeeRequest {
     uint32 deadline_delta = 8;
 
     /*
-    Optional. Whether to include the raw transaction hex in the response. This
-    is useful for cases where the transaction does not propagate and the caller
-    wants to manually broadcast it.
+    Optional. Whether to include the raw transaction hex in the response.
+    When set to true, the RPC call will block until the sweep transaction is
+    created, which allows the caller to retrieve the raw transaction. This is
+    useful for cases where the transaction does not propagate automatically
+    and the caller wants to manually broadcast it.
     */
     bool include_raw_tx = 9;
 }
