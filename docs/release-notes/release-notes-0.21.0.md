@@ -26,6 +26,11 @@
 
 ## RPC Additions
 
+* The `BumpFee` RPC now supports an optional
+  [`include_raw_tx`](https://github.com/lightningnetwork/lnd/pull/10323) field
+  that returns the hex-encoded raw transaction when set to true. This allows
+  manual broadcasting when transactions fail to propagate automatically.
+
 ## lncli Additions
 
 # Improvements
